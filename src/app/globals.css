@@ -1,0 +1,106 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --color-primary: #087F5B;
+  --color-secondary: #064E3B;
+  --color-background: #F8FAF9;
+  --color-accent: #B7F0D3;
+  --color-charcoal: #172B25;
+  --color-surface: #FFFFFF;
+  --color-surface-muted: #EFF5F2;
+  --color-border: #DCE8E2;
+}
+
+html {
+  scroll-behavior: smooth;
+  background-color: #F8FAF9;
+  color: #172B25;
+  color-scheme: light;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+body {
+  background-color: #F8FAF9;
+  color: #172B25;
+  min-height: 100vh;
+  overflow-x: hidden;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, .font-display {
+  letter-spacing: -0.02em;
+}
+
+/* Custom subtle clinical scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F8FAF9;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #B8D4C8;
+  border-radius: 9999px;
+  border: 2px solid #F8FAF9;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #087F5B;
+}
+
+/* Glassmorphism used sparingly & tastefully */
+.glass-surface {
+  background: rgba(255, 255, 255, 0.84);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(8, 127, 91, 0.12);
+}
+
+.glass-dark-emerald {
+  background: rgba(6, 78, 59, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(183, 240, 211, 0.18);
+}
+
+/* Subtle architectural grid pattern */
+.bg-clinical-grid {
+  background-size: 40px 40px;
+  background-image: 
+    linear-gradient(to right, rgba(8, 127, 91, 0.045) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(8, 127, 91, 0.045) 1px, transparent 1px);
+}
+
+.bg-clinical-dots {
+  background-image: radial-gradient(rgba(8, 127, 91, 0.12) 1px, transparent 1px);
+  background-size: 24px 24px;
+}
+
+/* Premium shadows */
+.shadow-editorial {
+  box-shadow: 0 20px 45px -15px rgba(6, 78, 59, 0.08), 0 4px 12px -2px rgba(23, 43, 37, 0.04);
+}
+
+.shadow-editorial-hover {
+  box-shadow: 0 28px 60px -15px rgba(8, 127, 91, 0.15), 0 8px 20px -4px rgba(23, 43, 37, 0.06);
+}
